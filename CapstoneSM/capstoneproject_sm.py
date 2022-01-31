@@ -176,8 +176,8 @@ def draw_plot_scatter(df_capstone):
     minval = sel_values[0]
     maxval = sel_values[1]
     st.write("## Performance Analysis")
-    st.write('### Selected age range:', sel_values)
-    st.write('### Used home computer:', is_home_comp )
+    st.write('**Selected age range**:', sel_values)
+    st.write('**Used home computer**:', is_home_comp )
     st.write("### Figure 1")    
       
     fig1 = px.histogram(df_capstone.query('home_computer==@is_home_comp and (age >= @minval and age <= @maxval)'), x="state", y="sum_score",  color="gender", hover_name="rt_total") 
@@ -195,7 +195,8 @@ def main():
     path_st = 'C://Users/snmishra/OneDrive - Educational Testing Service/DataScienceAcademy/DataScienceAcademyHomework/DataScienceAcademy/CapstoneSM/Data/states.csv'
     path_clean = 'C://Users/snmishra/OneDrive - Educational Testing Service/DataScienceAcademy/DataScienceAcademyHomework/DataScienceAcademy/CapstoneSM/Data/data_capstone4.csv'
     delimiter = ','
-    df_capstone_path = 'C://Temp/capstone_data.csv'
+    #df_capstone_path = 'C://Temp/capstone_data.csv'
+    df_capstone_path = '../Data/capstone_data.csv'
     #One time clean
     #read_write_csv_file(path_cs,path_clean) One time clean
     # cleaned dataframe 
